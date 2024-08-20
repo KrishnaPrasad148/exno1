@@ -45,7 +45,7 @@ STEP 6: Use zscore of to remove outliers
 </td>
 </tr>
 <tr>
-    <td width=50%>
+    <td width=25%>
 
 
 ```
