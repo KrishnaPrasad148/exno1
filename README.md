@@ -45,7 +45,7 @@ STEP 6: Use zscore of to remove outliers
 </td>
 </tr>
 <tr>
-    <td width=25%>
+    <td width=50%>
 
 
 ```
@@ -62,6 +62,8 @@ df
 
 </td>
 </tr>
+
+
 
             
 # Result
