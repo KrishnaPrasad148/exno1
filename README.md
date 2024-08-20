@@ -191,7 +191,9 @@ df.fillna({'GENDER':'MALE','NAME':'SRI''ADDRESS'
 </table>
 
 
-## DATA CLEANING
+
+
+## IQR(Inter Quartile Range)
 
 <table>
   <tr>
@@ -222,6 +224,227 @@ ir
               
 
 ![alt text](<Screenshot 2024-08-20 193316.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+ir.describe()
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 193456.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+import seaborn as sns
+sns.boxplot(x='sepal_width',data=ir)
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 193808.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+c1=ir.sepal_width.quantile(0.25)
+c3=ir.sepal_width.quantile(0.75)
+iq=c3-c1
+print(c3)
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 193915.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+rid=ir[((ir.sepal_width<(c1-1.5*iq))|(ir.sepal_width>(c3+1.5*iq)))]
+rid['sepal_width']
+
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 194045.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+delid=ir[~((ir.sepal_width<(c1-1.5*iq))|(ir.sepal_width>(c3+1.5*iq)))]
+delid
+
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 194136.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+sns.boxplot(x='sepal_width',data=delid)
+
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 194221.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+import matplotlib.pyplot as plt
+import pandas as pd
+import numpy as np
+import scipy.stats as stats
+dataset=pd.read_csv("heights.csv")
+dataset
+
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 194402.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+df = pd.read_csv("heights.csv")
+q1 = df['height'].quantile(0.25)
+q2 = df['height'].quantile(0.5)
+q3 = df['height'].quantile(0.75)
+iqr = q3-q1
+iqr
+
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 194521.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+low = q1 - 1.5*iqr
+low
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 194615.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+high = q3 + 1.5*iqr
+high
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 194652.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+df1 = df[((df['height'] >=low)& (df['height'] <=high))]
+df1
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 194739.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+z = np.abs(stats.zscore(df['height']))
+z
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 194828.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+df1 = df[z<3]
+df1
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 194912.png>)
 </td>
 </tr>
 
