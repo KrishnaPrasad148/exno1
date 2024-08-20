@@ -21,12 +21,17 @@ STEP 5: Remove outliers using IQR
 STEP 6: Use zscore of to remove outliers
 
 
+
 ```
 # Developed By: KRISHNA PRASAD.S
 # Register Number: 212223230108
 ```
 
+
+
 # Coding and Output
+
+
 
 ## DATA CLEANING
 
