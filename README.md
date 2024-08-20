@@ -109,6 +109,82 @@ df.dropna()
 </td>
 </tr>
 
+<tr>
+    <td width=50%>
+
+
+```
+df.fillna(0)
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 192400.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+df.fillna(method = 'ffill')
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 192510.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+df.fillna(method = 'bfill')
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 192625.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+df_dropped = df.dropna()
+df_dropped
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 192716.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+df.fillna({'GENDER':'MALE','NAME':'SRI','ADDRESS':'POONAMALEE','M1':98,'M2':87,'M3':76,'M4':92,'TOTAL':305,'AVG':89.999999})
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 192806.png>)
+</td>
+</tr>
+
 
 </table>
 
