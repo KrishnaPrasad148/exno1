@@ -175,7 +175,9 @@ df_dropped
 
 
 ```
-df.fillna({'GENDER':'MALE','NAME':'SRI','ADDRESS':'POONAMALEE','M1':98,'M2':87,'M3':76,'M4':92,'TOTAL':305,'AVG':89.999999})
+df.fillna({'GENDER':'MALE','NAME':'SRI',
+'ADDRESS':'POONAMALEE','M1':98,'M2':87,'M3':76,'M4':92,
+'TOTAL':305,'AVG':89.999999})
 ```
   </td>
   <td>
