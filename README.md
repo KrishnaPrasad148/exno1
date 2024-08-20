@@ -281,7 +281,8 @@ print(c3)
 
 
 ```
-rid=ir[((ir.sepal_width<(c1-1.5*iq))|(ir.sepal_width>(c3+1.5*iq)))]
+rid=ir[((ir.sepal_width<(c1-1.5*iq))|
+(ir.sepal_width>(c3+1.5*iq)))]
 rid['sepal_width']
 
 ```
@@ -298,7 +299,8 @@ rid['sepal_width']
 
 
 ```
-delid=ir[~((ir.sepal_width<(c1-1.5*iq))|(ir.sepal_width>(c3+1.5*iq)))]
+delid=ir[~((ir.sepal_width<(c1-1.5*iq))|
+(ir.sepal_width>(c3+1.5*iq)))]
 delid
 
 ```
