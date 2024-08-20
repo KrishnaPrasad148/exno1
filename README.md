@@ -62,9 +62,6 @@ df
 
 </td>
 </tr>
+</table>
 
-
-
-            
-# Result
-          <<include your Result here>>
+# RESULT:
