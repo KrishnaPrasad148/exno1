@@ -190,5 +190,43 @@ df.fillna({'GENDER':'MALE','NAME':'SRI''ADDRESS'
 
 </table>
 
+
+## DATA CLEANING
+
+<table>
+  <tr>
+    <td width=50%>
+
+
+  ## CODING
+
+  </td>
+  <td>
+              
+## OUTPUT
+
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+import pandas as pd
+ir=pd.read_csv('iris.csv')
+ir
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 193316.png>)
+</td>
+</tr>
+
+
+</table>
+
 # RESULT:
 Thus we have cleaned the data and removed the outliers by detection using IQR and Z-score method.
