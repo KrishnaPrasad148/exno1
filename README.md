@@ -56,12 +56,60 @@ df
   </td>
   <td>
               
-#### OUTPUT:
+
 ![Screenshot 2024-08-20 191018](https://github.com/user-attachments/assets/0f993a41-db77-40a8-8ef8-dcbb670935d9)
 
 
 </td>
 </tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+df.isnull().sum()
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 191813.png>)
+
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+df.isnull().any()
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 191945.png>)
+</td>
+</tr>
+
+<tr>
+    <td width=50%>
+
+
+```
+df.dropna()
+```
+  </td>
+  <td>
+              
+
+![alt text](<Screenshot 2024-08-20 192053.png>)
+</td>
+</tr>
+
+
 </table>
 
 # RESULT:
