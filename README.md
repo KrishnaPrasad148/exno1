@@ -50,7 +50,7 @@ STEP 6: Use zscore of to remove outliers
 
 ```
 import pandas as pd
-df=pd.read_csv('/content/SAMPLEDS.csv')
+df=pd.read_csv("SAMPLEIDS.csv")
 df
 ```
   </td>
